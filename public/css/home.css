@@ -1,0 +1,21 @@
+
+.container-fluid{
+    padding: 0px;
+}
+
+.navbar{
+    padding: 40px 30px 30px 30px;
+    background-color: #FCF9F7;
+}
+
+.nav-link{
+    font-family: "Raleway","Helvetica Neue","Helvetica","Arial","sans-serif";
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight:lighter;
+    color:#222120;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 25px;
+}
+
