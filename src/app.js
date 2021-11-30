@@ -1,3 +1,4 @@
+require('dotenv').config()
 const path = require('path')
 const express = require('express')
 const mailchimp = require('@mailchimp/mailchimp_marketing')
@@ -22,19 +23,20 @@ app.use(express.static(publicDirectoryPath))
 app.use(express.urlencoded())
 
 mailchimp.setConfig({
-    apiKey: '6e7c2a1715e71be06a076f0329b8b920-us20',
-    server: 'us20'
+    apiKey: process.env.API_KEY,
+    server: process.env.SERVER
 })
 
 app.get('/', (req, res) => {
     res.render('index')
+    console.log()
 })
 
 app.post('/', function (req, res) {
     const fname = req.body.fname
     const lname = req.body.lname
     const email = req.body.email
-    const listId = '9ed7fcdc86'
+    const listId = process.env.LIST_ID
     //creating an object with the users data
     const subscribingUser = {
         firstName: fname,
