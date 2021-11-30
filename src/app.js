@@ -23,8 +23,8 @@ app.use(express.static(publicDirectoryPath))
 app.use(express.urlencoded())
 
 mailchimp.setConfig({
-    apiKey: process.env.API_KEY,
-    server: process.env.SERVER
+    apiKey: '6e7c2a1715e71be06a076f0329b8b920-us20',
+    server: 'us20'
 })
 
 app.get('/', (req, res) => {
@@ -36,7 +36,7 @@ app.post('/', function (req, res) {
     const fname = req.body.fname
     const lname = req.body.lname
     const email = req.body.email
-    const listId = process.env.LIST_ID
+    const listId = '9ed7fcdc86'
     //creating an object with the users data
     const subscribingUser = {
         firstName: fname,
