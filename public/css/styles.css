@@ -316,6 +316,9 @@ i{
 .form-blocks{
     font-family: 'Athiti', sans-serif;
 }
+.form-blocks .email{
+    text-transform: lowercase;
+}
 .btn{
     font-family: 'Athiti', sans-serif;
 }
