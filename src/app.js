@@ -29,7 +29,10 @@ mailchimp.setConfig({
 
 app.get('/', (req, res) => {
     res.render('index')
-    console.log()
+})
+
+app.get('/index', (req, res) => {
+    res.render('index')
 })
 
 app.post('/', function (req, res) {
